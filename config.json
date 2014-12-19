@@ -7,6 +7,60 @@
   "deployPath": "70s/1406-1/",
   "prizeSwitch": 1,
   "ajaxList": {
+    "/activitystatsperminforday": {
+      "activity_stats_per_mintue": [
+
+          [
+            "Fri, 12 Dec 2014 11:08:00 GMT",
+            8,
+            12,
+            "-"
+          ],
+          [
+            "Fri, 12 Dec 2014 11:09:00 GMT",
+            5,
+            2,
+            5
+          ],
+          [
+            "Fri, 12 Dec 2014 11:10:00 GMT",
+            5,
+            3,
+            6
+          ],
+          [
+            "Fri, 12 Dec 2014 11:11:00 GMT",
+            5,
+            4,
+            7
+          ],
+          [
+            "Fri, 12 Dec 2014 11:12:00 GMT",
+            5,
+            8,
+            4
+          ],
+          [
+            "Fri, 12 Dec 2014 11:13:00 GMT",
+            5,
+            8,
+            4
+          ],
+          [
+            "Fri, 12 Dec 2014 11:14:00 GMT",
+            5,
+            8,
+            4
+          ],
+          [
+            "Fri, 12 Dec 2014 11:15:00 GMT",
+            5,
+            8,
+            4
+          ]
+        ]
+
+    },
     "/activitystatspermin": {
       "activity_stats_per_mintue": [
         [

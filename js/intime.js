@@ -44,10 +44,10 @@ var intime = new Chart({
     self.option.series[1].data = [];
     self.option.series[2].data = [];
   };
-  intime.paint = function(url) {
+  intime.paint = function(url,date) {
     var self = this;
     $.ajax({
-      url: url,
+      url: url + '?stats_minute=' + (date || today()),
       success: function(data) {
         if (typeof data === 'object' && data.activity_stats_per_mintue.length > 1) {
           var list = data.activity_stats_per_mintue;
@@ -67,7 +67,13 @@ var intime = new Chart({
       }
     });
   };
-
+  function today(){
+    var date = new Date();
+    var yy = date.getFullYear();
+    var mm = date.getMonth();
+    var dd = date.getDate();
+    return yy + '-' + mm + '-' + dd;
+  }
   function repair(option) {
     //xAxis
     var lastx = option.xAxis[0].data[option.xAxis[0].data.length - 1];
