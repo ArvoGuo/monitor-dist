@@ -1,5 +1,5 @@
 var Config = {
-  pageRange: 2
+  pageRange: 15
 };
 
 var Tool = {

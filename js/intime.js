@@ -44,7 +44,7 @@ var intime = new Chart({
     self.option.series[1].data = [];
     self.option.series[2].data = [];
   };
-  intime.paint = function(url,date) {
+  intime.paint = function(url, date) {
     var self = this;
     $.ajax({
       url: url + '?stats_minute=' + (date || today()),
@@ -58,22 +58,30 @@ var intime = new Chart({
             self.option.series[1].data.push(item[2]);
             self.option.series[2].data.push(item[3]);
           });
-          if(self.option.repair){
+          if (self.option.repair) {
             repair(self.option);
           }
           Charts['chart-main'].ele.show();
           Charts['chart-main'].chart.setOption(self.option);
+        } else {
+          Charts['chart-main'].ele.show();
+          Charts['chart-main'].chart.showLoading({
+            text: '对不起，查询数据为空！', //loading话术
+          });
         }
+
       }
     });
   };
-  function today(){
+
+  function today() {
     var date = new Date();
     var yy = date.getFullYear();
     var mm = date.getMonth();
     var dd = date.getDate();
-    return yy + '-' + mm + '-' + dd;
+    return yy + '-' + mm + '-' + dd + ' 23:59';
   }
+
   function repair(option) {
     //xAxis
     var lastx = option.xAxis[0].data[option.xAxis[0].data.length - 1];
