@@ -11,7 +11,7 @@ var Tool = {
   formatDate: function(value) {
     var date = new Date(value);
     var yy = date.getFullYear();
-    var mm = date.getMonth();
+    var mm = date.getMonth() + 1;
     var dd = Tool.formatTime(date.getDate());
     var h = Tool.formatTime(date.getHours());
     var m = Tool.formatTime(date.getMinutes());

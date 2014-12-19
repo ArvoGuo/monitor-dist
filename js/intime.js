@@ -77,7 +77,7 @@ var intime = new Chart({
   function today() {
     var date = new Date();
     var yy = date.getFullYear();
-    var mm = date.getMonth();
+    var mm = date.getMonth() + 1;
     var dd = date.getDate();
     return yy + '-' + mm + '-' + dd + ' 23:59';
   }
